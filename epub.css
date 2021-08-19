@@ -1,0 +1,109 @@
+/* This defines styles and classes used in the book */
+body { margin: 5%; text-align: justify; font-size: medium; }
+code { font-family: monospace; }
+h1 { text-align: left; }
+h2 { text-align: left; }
+h3 { text-align: left; }
+h4 { text-align: left; }
+h5 { text-align: left; }
+h6 { text-align: left; }
+h1.title { }
+h2.author { }
+h3.date { }
+ol.toc { padding: 0; margin-left: 1em; }
+ol.toc li { list-style-type: none; margin: 0; padding: 0; }
+a.footnote-ref { vertical-align: super; }
+em, em em em, em em em em em { font-style: italic;}
+em em, em em em em { font-style: normal; }
+
+/* Fonts 
+@font-face {
+  font-family: BemboStd;
+  font-style: normal;
+  font-weight: normal;
+  src:url("../fonts/BemboStd.otf");
+}
+@font-face {
+  font-family: BemboStd;
+  font-style: normal;
+  font-weight: bold;
+  src:url("../fonts/BemboStd-Bold.otf");
+}
+@font-face {
+  font-family: BemboStd;
+  font-style: italic;
+  font-weight: normal;
+  src:url("../fonts/BemboStd-Italic.otf");
+}
+
+.serif {
+    font-family: BemboStd, serif;
+}
+*/
+
+/* Improve legibility */
+
+body {
+  font-kerning: normal;
+  font-variant: common-ligatures oldstyle-nums proportional-nums;
+  font-feature-settings: "kern", "liga", "clig", "onum", "pnum";
+}
+
+h1, h2, h3 {
+  font-variant: common-ligatures lining-nums proportional-nums;
+  font-feature-settings: "kern", "liga", "clig", "lnum", "pnum";
+}
+
+table {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "kern", "lnum", "tnum";
+}
+
+code {
+  font-variant: no-common-ligatures lining-nums;
+  font-feature-settings: "kern" 0, "liga" 0, "clig" 0, "lnum";
+}
+
+.fraction {
+  font-variant-numeric: diagonal-fractions;
+  font-feature-settings: "frac";
+}
+/* Asterisms for HRs */
+/* we could perhaps make these a smidge bigger */
+hr {
+  height: 2.5em;
+  background: transparent url("../media/ASTERISM") no-repeat center;
+  background-size: 3.5em 2.25em;
+  overflow: hidden;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  border:0;
+}
+
+img { border:0; }
+
+
+/* Use real small capitals */
+
+element {
+  font-variant: small-caps;
+}
+
+b {
+    font-variant: small-caps;
+}
+
+/*
+@supports not (font-variant-caps: small-caps) {
+    element {
+        font-variant: normal;
+        font-feature-settings: "smcp", "onum", "pnum";
+    }
+}
+*/
+
+element {
+    font-variant: normal;
+    font-feature-settings: "smcp", "onum", "pnum";
+    /* font-variant-caps: small-caps; */
+}
